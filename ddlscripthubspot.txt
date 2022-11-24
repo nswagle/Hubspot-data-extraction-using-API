@@ -1,0 +1,142 @@
+
+--DROP TABLE "Hubspot".companiesdata;
+--DROP TABLE "Hubspot".emails_data;
+--DROP TABLE "Hubspot".dealsdata;
+--DROP TABLE "Hubspot".notes_data;
+--DROP TABLE "Hubspot".meetingdata;
+--DROP TABLE "Hubspot".postal_mail_data;
+--DROP TABLE "Hubspot".products_data;
+--DROP TABLE "Hubspot".quotesdata;
+--DROP TABLE "Hubspot".tickets_data;
+
+
+
+
+CREATE TABLE "Hubspot".companies(
+	"Column1" int8 NULL,
+	id int8  NULL,
+	"createdAt" varchar(100) NULL,
+	"updatedAt" varchar(100) NULL,
+	archived bool NULL,
+	"properties.createdate" varchar(100) NULL,
+	"properties.domain" varchar(100) NULL,
+	"properties.hs_lastmodifieddate" varchar(100) NULL,
+	"properties.hs_object_id" int8 NULL,
+	"properties.name" varchar(100) null
+	
+);
+
+
+
+CREATE TABLE "Hubspot".contacts(
+	"Column1" int4 NULL,
+	id int8 NULL,
+	"createdAt" varchar(100) NULL,
+	"updatedAt" varchar(100) NULL,
+	archived bool NULL,
+	"createdate" varchar(100) NULL,
+	"email" varchar(200) NULL,
+	"firstname" varchar(100) NULL,
+	"hs_object_id" int8 NULL,
+	"lastmodifieddate" varchar(100) NULL,
+	"lastname" varchar(100) null
+);
+
+
+
+
+
+
+CREATE TABLE "Hubspot".deals (
+	"Column1" int8 NULL,
+	id int8 NULL,
+	"createdAt" varchar(100) NULL,
+	"updatedAt" varchar(100) NULL,
+	archived bool NULL,
+	"amount" int8 NULL,
+	"closedate" varchar(100) NULL,
+	"createdate" varchar(100) NULL,
+	"dealname" varchar(100) NULL,
+	"dealstage" varchar(100) NULL,
+	"hs_lastmodifieddate" varchar(100) NULL,
+	"hs_object_id" int8 NULL,
+	"pipeline" varchar(100) null
+);
+
+
+
+
+CREATE TABLE "Hubspot".emails (
+	"Column1" int8 NULL,
+	id int8 NULL,
+	"createdAt" varchar(100) NULL,
+	"updatedAt" varchar(100) NULL,
+	archived bool NULL,
+	"hs_createdate" varchar(100) NULL,
+	"hs_lastmodifieddate" varchar(100) NULL,
+	"hs_object_id" int8 null
+);
+
+
+
+
+
+
+CREATE TABLE "Hubspot".meeting (
+	"Column1" int8 NULL,
+	id int8 NULL,
+	"createdAt" varchar(100) NULL,
+	"updatedAt" varchar(100) NULL,
+	archived bool NULL,
+	"hs_createdate" varchar(100) NULL,
+	"hs_lastmodifieddate" varchar(100) NULL,
+	"hs_object_id" int8 null
+);
+
+
+
+
+
+CREATE TABLE "Hubspot".notes (
+	"Column1" int8 NULL,
+	id int8 NULL,
+	"createdAt" varchar(100) NULL,
+	"updatedAt" varchar(100) NULL,
+	archived bool NULL,
+	"hs_createdate" varchar(100) NULL,
+	"hs_lastmodifieddate" varchar(100) NULL,
+	"hs_object_id" int8 null
+);
+
+
+
+
+
+CREATE TABLE "Hubspot".postal_mail(
+	"Column1" varchar(100) NULL
+);
+
+
+
+
+
+
+CREATE TABLE "Hubspot".products (
+	"Column1" varchar(100) NULL
+);
+
+
+
+
+CREATE TABLE "Hubspot".quotes (
+	"Column1" varchar(100) NULL
+);
+
+
+
+
+
+
+CREATE TABLE "Hubspot".tickets (
+	"Column1" varchar(100) NULL
+);
