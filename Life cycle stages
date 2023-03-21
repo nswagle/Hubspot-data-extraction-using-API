@@ -1,0 +1,32 @@
+import requests
+import pandas as pd
+import json
+
+url2 = "https://api.hubapi.com/crm/v3/objects/companies?propertiesWithHistory=lifecyclestage"
+YOUR_ACCESS_TOKEN = "your access token"
+headers = {
+  'content-type': 'application/json',
+  'authorization': 'Bearer %s' % YOUR_ACCESS_TOKEN
+}
+
+response2 = requests.request("GET", url2, headers=headers)
+
+
+js3 = json.loads(response2.text)
+
+allResults2 = list()
+counter = 0
+
+while('paging' in js3):
+    allResults2.extend(js3['results'])
+    url2 = js3['paging']['next']['link']
+    print(url2)
+    response2 = requests.request("GET", url2, headers=headers)
+    js3 = json.loads(response2.text)
+    counter = counter + 1
+    
+out_file2 = open("companiesdata.json", "w")
+  
+json.dump(allResults2, out_file2, indent = 6)
+  
+out_file2.close()
